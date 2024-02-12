@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://clf6o76lxhwil"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_0fkof"]
+[ext_resource type="Texture2D" uid="uid://b66q13y5dxv05" path="res://DALL·E 2024-02-09 12.40.04 - Create a 1920x1080 cartoon image of an ominous room, keeping the art style and perspective as previously described but replacing the modern office pho.webp" id="2_o8tqy"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ddkpj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0fkof")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_o8tqy")
+expand_mode = 2
+
+[node name="StartGame" type="Button" parent="."]
+material = SubResource("CanvasItemMaterial_ddkpj")
+layout_mode = 0
+offset_left = 864.0
+offset_top = 616.0
+offset_right = 942.0
+offset_bottom = 653.0
+scale = Vector2(1.785, 1.785)
+action_mode = 0
+text = "Start"
+expand_icon = true
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 704.0
+offset_right = 942.0
+offset_bottom = 735.0
+scale = Vector2(1.785, 1.785)
+text = "Options"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 784.0
+offset_right = 941.0
+offset_bottom = 815.0
+scale = Vector2(1.785, 1.785)
+text = "Exit"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]

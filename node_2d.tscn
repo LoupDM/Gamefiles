@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://knxaols18eeh"]
+
+[sub_resource type="GDScript" id="GDScript_o1opn"]
+script/source = "extends RichTextLabel
+
+
+"
+
+[node name="Node2D" type="RichTextLabel"]
+offset_left = 496.0
+offset_top = 488.0
+offset_right = 1376.0
+offset_bottom = 840.0
+script = SubResource("GDScript_o1opn")

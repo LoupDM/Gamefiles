@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnkygn1b6lih8"]
+
+[ext_resource type="Script" path="res://game_screen.gd" id="1_2r6ug"]
+[ext_resource type="Texture2D" uid="uid://b66q13y5dxv05" path="res://DALL·E 2024-02-09 12.40.04 - Create a 1920x1080 cartoon image of an ominous room, keeping the art style and perspective as previously described but replacing the modern office pho.webp" id="1_rawd1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m60mh"]
+
+[node name="GameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2r6ug")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_rawd1")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_m60mh")
+layout_mode = 0
+offset_left = 576.0
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 896.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 640.0
+offset_right = 1280.0
+offset_bottom = 896.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 500.0
+offset_right = 1788.0
+offset_bottom = 636.0
+
+[node name="Option1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Press 1"
+
+[node name="Option2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Press 2:"
+
+[node name="Option3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Press 3"
+
+[node name="Option4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Press 4"
